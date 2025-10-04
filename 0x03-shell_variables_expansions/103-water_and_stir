@@ -1,0 +1,7 @@
+#!/bin/bash
+echo "$WATER" | tr 'water' '01234' > /tmp/water_num
+echo "$STIR" | tr 'stir' '0123' > /tmp/stir_num
+
+sum=$(( $(cat /tmp/water_num) + $(cat /tmp/stir_num) ))
+
+echo "$sum" | tr '0123456789' 'bestcholhc'
